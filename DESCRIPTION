@@ -1,14 +1,15 @@
-Package: vdgp
-Title: Veridical data generating processes
+Package: dgpoix
+Title: Generate synthetic data that is as fresh as the real thing
 Version: 0.0.1
 Authors@R: c(
     person("Tiffany", "Tang", , "tiffany.tang@berkeley.edu", role = c("aut", "cre")),
     person("James", "Duncan", , "jpduncan@berkeley.edu", role = "aut",
            comment = c(ORCID = "0000-0003-3297-681X"))
   )
-Description: A modular library of data generating processes that are
-    flexible, composable, and easily accommodate real data, allowing for
-    rapid creation of reality-inspired synthetic data.
+Description: dgpoix (pronounced "dee-gee-pwaa") provides modular library of
+    data generating processes that are flexible, composable, and easily
+    accommodate real data, allowing for rapid creation of reality-inspired
+    synthetic data.
 License: MIT + file LICENSE
 Imports:
     dplyr,
@@ -20,7 +21,7 @@ Imports:
     rlang,
     tidyselect
 Suggests:
-    testthat (>= 3.0.0)
+    testthat (>= 3.1.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

@@ -116,7 +116,7 @@ test_that("Functions in the DGP library work properly", {
   expect_equal(sim_data$support, 1:2)
   expect_equal(dim(sim_data$X), c(100, 10))
   expect_equal(length(sim_data$y), 100)
-  
+
   ## correlated_logistic_gaussian_dgp
   sim_data <- correlated_logistic_gaussian_dgp(n = 100, p_uncorr = 0, p_corr = 10,
                                                s_corr = 2, corr = 0.7)
@@ -124,7 +124,7 @@ test_that("Functions in the DGP library work properly", {
   expect_equal(sim_data$support, 1:2)
   expect_equal(dim(sim_data$X), c(100, 10))
   expect_equal(length(sim_data$y), 100)
-  
+
   sim_data <- correlated_logistic_gaussian_dgp(n = 100, p_uncorr = 10, p_corr = 2,
                                                corr = 0.7, betas_uncorr_sd = 1,
                                                betas_corr = c(-1, 0))
@@ -155,7 +155,7 @@ test_that("Functions in the DGP library work properly", {
   expect_equal(sim_data$int_support, c("1-", "2+"))
   expect_equal(dim(sim_data$X), c(100, 10))
   expect_equal(length(sim_data$y), 100)
-  
+
   ## correlated_lss_gaussian_dgp
   sim_data <- correlated_lss_gaussian_dgp(n = 100, p_uncorr = 0, p_corr = 10,
                                           k = 2, s_corr = 2, corr = 0.7,
@@ -233,7 +233,7 @@ test_that("Functions in the DGP y library work properly", {
   y <- generate_y_lss(X = X, k = 2, s = matrix(1:4, nrow = 2, byrow = TRUE),
                       thresholds = 0, signs = 1, betas = 1)
   expect_equal(length(y), nrow(X))
-  expect_equal(y, as.numeric((X[, 1] > 0) * (X[, 2] > 0) + 
+  expect_equal(y, as.numeric((X[, 1] > 0) * (X[, 2] > 0) +
                                (X[, 3] > 0) * (X[, 4] > 0)))
 
   y <- generate_y_lss(X = X, k = 1,
@@ -292,7 +292,7 @@ test_that("Functions in the DGP utilities library work properly", {
                                train_prop = 0.5,
                                return_values = c("X", "y", "support"))
   expect_equal(names(dgp_out), c("X", "Xtest", "y", "ytest", "support"))
-  
+
   dgp_out <- return_DGP_output(X = iris %>% dplyr::select(-Species),
                                y = iris$Species,
                                support = 1:4,
@@ -300,7 +300,7 @@ test_that("Functions in the DGP utilities library work properly", {
                                train_prop = 0.5,
                                return_values = c("X", "y"))
   expect_equal(names(dgp_out), c("X", "Xtest", "y", "ytest"))
-  
+
   dgp_out <- return_DGP_output(X = iris %>% dplyr::select(-Species),
                                y = iris$Species,
                                support = NULL,

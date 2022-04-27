@@ -1,4 +1,4 @@
 library(testthat)
-library(vdgp)
+library(dgpoix)
 
-test_check("vdgp")
+test_check("dgpoix")
