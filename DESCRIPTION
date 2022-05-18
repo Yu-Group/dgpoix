@@ -10,7 +10,7 @@ Description: dgpoix (pronounced "dee-gee-pwaa") provides modular library of
     data generating processes that are flexible, composable, and easily
     accommodate real data, allowing for rapid creation of reality-inspired
     synthetic data.
-License: MIT + file LICENSE
+License: GPL (>= 3)
 Imports:
     dplyr,
     magrittr,
